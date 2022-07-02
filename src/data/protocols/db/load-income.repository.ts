@@ -5,5 +5,5 @@ export type loadIncomeRepository = {
 };
 
 export namespace loadIncomeRepository {
-  export type Result = IncomeModel[];
+  export type Result = IncomeModel & { id: string }[];
 }

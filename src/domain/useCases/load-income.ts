@@ -6,5 +6,5 @@ export interface LoadIncome {
 }
 
 export namespace LoadIncome {
-  export type Result = Promise<Either<Error, IncomeModel[]>>;
+  export type Result = Promise<Either<Error, IncomeModel & { id: string }[]>>;
 }
