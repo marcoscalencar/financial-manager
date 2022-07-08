@@ -6,6 +6,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node dist/main/server.js",
+    "prebuild": "npm run test",
     "build": "tsc -p tsconfig-build.json",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/main/server.ts",
     "test": "jest --passWithNoTests --runInBand --no-cache",
