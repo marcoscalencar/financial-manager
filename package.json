@@ -1,7 +1,7 @@
 {
   "name": "financial-manager",
   "version": "1.0.0",
-  "main": "./dist/main/server.js",
+  "main": "./src/main/server.ts",
   "license": "MIT",
   "scripts": {
     "start": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/main/server.ts",
