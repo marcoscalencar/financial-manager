@@ -17,6 +17,9 @@
   "_moduleAliases": {
     "@": "dist"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.4",
