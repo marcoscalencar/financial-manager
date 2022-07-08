@@ -1,9 +1,12 @@
 {
   "name": "financial-manager",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/main/server.js",
   "license": "MIT",
   "scripts": {
+    "prestart": "npm build",
+    "start": "node dist/main/server.js",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/main/server.ts",
     "test": "jest --passWithNoTests --runInBand --no-cache",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
@@ -20,12 +23,14 @@
     "@types/node": "^18.0.0",
     "cz-conventional-changelog": "3.3.0",
     "jest": "^28.1.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^28.0.5",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@sentry/node": "^7.5.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "module-alias": "^2.2.2"
