@@ -4,7 +4,6 @@
   "main": "./dist/main/server.js",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm build",
     "start": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/main/server.ts",
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/main/server.ts",
